@@ -1,0 +1,14 @@
+C:\C#\h02\Oef1\bin\Debug\Oef1.exe.config
+C:\C#\h02\Oef1\bin\Debug\Oef1.exe
+C:\C#\h02\Oef1\bin\Debug\Oef1.pdb
+C:\C#\h02\Oef1\obj\Debug\MainWindow.g.cs
+C:\C#\h02\Oef1\obj\Debug\App.g.cs
+C:\C#\h02\Oef1\obj\Debug\Oef1_MarkupCompile.cache
+C:\C#\h02\Oef1\obj\Debug\Oef1_MarkupCompile.lref
+C:\C#\h02\Oef1\obj\Debug\MainWindow.baml
+C:\C#\h02\Oef1\obj\Debug\Oef1.g.resources
+C:\C#\h02\Oef1\obj\Debug\Oef1.Properties.Resources.resources
+C:\C#\h02\Oef1\obj\Debug\Oef1.csproj.GenerateResource.Cache
+C:\C#\h02\Oef1\obj\Debug\Oef1.csproj.CoreCompileInputs.cache
+C:\C#\h02\Oef1\obj\Debug\Oef1.exe
+C:\C#\h02\Oef1\obj\Debug\Oef1.pdb

@@ -1,0 +1,15 @@
+C:\C#\h02\Oef5\bin\Debug\Oef5.exe.config
+C:\C#\h02\Oef5\bin\Debug\Oef5.exe
+C:\C#\h02\Oef5\bin\Debug\Oef5.pdb
+C:\C#\h02\Oef5\obj\Debug\Oef5.csprojResolveAssemblyReference.cache
+C:\C#\h02\Oef5\obj\Debug\MainWindow.g.cs
+C:\C#\h02\Oef5\obj\Debug\App.g.cs
+C:\C#\h02\Oef5\obj\Debug\Oef5_MarkupCompile.cache
+C:\C#\h02\Oef5\obj\Debug\Oef5_MarkupCompile.lref
+C:\C#\h02\Oef5\obj\Debug\MainWindow.baml
+C:\C#\h02\Oef5\obj\Debug\Oef5.g.resources
+C:\C#\h02\Oef5\obj\Debug\Oef5.Properties.Resources.resources
+C:\C#\h02\Oef5\obj\Debug\Oef5.csproj.GenerateResource.Cache
+C:\C#\h02\Oef5\obj\Debug\Oef5.csproj.CoreCompileInputs.cache
+C:\C#\h02\Oef5\obj\Debug\Oef5.exe
+C:\C#\h02\Oef5\obj\Debug\Oef5.pdb

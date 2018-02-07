@@ -1,0 +1,15 @@
+C:\C#\h02\HelloButton\bin\Debug\HelloButton.exe.config
+C:\C#\h02\HelloButton\bin\Debug\HelloButton.exe
+C:\C#\h02\HelloButton\bin\Debug\HelloButton.pdb
+C:\C#\h02\HelloButton\obj\Debug\HelloButton.csprojResolveAssemblyReference.cache
+C:\C#\h02\HelloButton\obj\Debug\MainWindow.g.cs
+C:\C#\h02\HelloButton\obj\Debug\App.g.cs
+C:\C#\h02\HelloButton\obj\Debug\HelloButton_MarkupCompile.cache
+C:\C#\h02\HelloButton\obj\Debug\HelloButton_MarkupCompile.lref
+C:\C#\h02\HelloButton\obj\Debug\MainWindow.baml
+C:\C#\h02\HelloButton\obj\Debug\HelloButton.g.resources
+C:\C#\h02\HelloButton\obj\Debug\HelloButton.Properties.Resources.resources
+C:\C#\h02\HelloButton\obj\Debug\HelloButton.csproj.GenerateResource.Cache
+C:\C#\h02\HelloButton\obj\Debug\HelloButton.csproj.CoreCompileInputs.cache
+C:\C#\h02\HelloButton\obj\Debug\HelloButton.exe
+C:\C#\h02\HelloButton\obj\Debug\HelloButton.pdb
