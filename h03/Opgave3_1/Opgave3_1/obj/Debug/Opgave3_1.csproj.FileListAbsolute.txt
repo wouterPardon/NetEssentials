@@ -1,0 +1,15 @@
+C:\C#\h03\Opgave3_1\Opgave3_1\bin\Debug\Opgave3_1.exe.config
+C:\C#\h03\Opgave3_1\Opgave3_1\bin\Debug\Opgave3_1.exe
+C:\C#\h03\Opgave3_1\Opgave3_1\bin\Debug\Opgave3_1.pdb
+C:\C#\h03\Opgave3_1\Opgave3_1\obj\Debug\Opgave3_1.csprojResolveAssemblyReference.cache
+C:\C#\h03\Opgave3_1\Opgave3_1\obj\Debug\MainWindow.g.cs
+C:\C#\h03\Opgave3_1\Opgave3_1\obj\Debug\App.g.cs
+C:\C#\h03\Opgave3_1\Opgave3_1\obj\Debug\Opgave3_1_MarkupCompile.cache
+C:\C#\h03\Opgave3_1\Opgave3_1\obj\Debug\Opgave3_1_MarkupCompile.lref
+C:\C#\h03\Opgave3_1\Opgave3_1\obj\Debug\MainWindow.baml
+C:\C#\h03\Opgave3_1\Opgave3_1\obj\Debug\Opgave3_1.g.resources
+C:\C#\h03\Opgave3_1\Opgave3_1\obj\Debug\Opgave3_1.Properties.Resources.resources
+C:\C#\h03\Opgave3_1\Opgave3_1\obj\Debug\Opgave3_1.csproj.GenerateResource.Cache
+C:\C#\h03\Opgave3_1\Opgave3_1\obj\Debug\Opgave3_1.csproj.CoreCompileInputs.cache
+C:\C#\h03\Opgave3_1\Opgave3_1\obj\Debug\Opgave3_1.exe
+C:\C#\h03\Opgave3_1\Opgave3_1\obj\Debug\Opgave3_1.pdb

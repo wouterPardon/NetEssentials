@@ -1,0 +1,15 @@
+C:\C#\Pedigree\Pedigree\bin\Debug\Pedigree.exe.config
+C:\C#\Pedigree\Pedigree\bin\Debug\Pedigree.exe
+C:\C#\Pedigree\Pedigree\bin\Debug\Pedigree.pdb
+C:\C#\Pedigree\Pedigree\obj\Debug\Pedigree.csprojResolveAssemblyReference.cache
+C:\C#\Pedigree\Pedigree\obj\Debug\MainWindow.g.cs
+C:\C#\Pedigree\Pedigree\obj\Debug\App.g.cs
+C:\C#\Pedigree\Pedigree\obj\Debug\Pedigree_MarkupCompile.cache
+C:\C#\Pedigree\Pedigree\obj\Debug\Pedigree_MarkupCompile.lref
+C:\C#\Pedigree\Pedigree\obj\Debug\MainWindow.baml
+C:\C#\Pedigree\Pedigree\obj\Debug\Pedigree.g.resources
+C:\C#\Pedigree\Pedigree\obj\Debug\Pedigree.Properties.Resources.resources
+C:\C#\Pedigree\Pedigree\obj\Debug\Pedigree.csproj.GenerateResource.Cache
+C:\C#\Pedigree\Pedigree\obj\Debug\Pedigree.csproj.CoreCompileInputs.cache
+C:\C#\Pedigree\Pedigree\obj\Debug\Pedigree.exe
+C:\C#\Pedigree\Pedigree\obj\Debug\Pedigree.pdb

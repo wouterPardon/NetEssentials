@@ -1,0 +1,15 @@
+C:\C#\h02\FirstDrawing\bin\Debug\FirstDrawing.exe.config
+C:\C#\h02\FirstDrawing\bin\Debug\FirstDrawing.exe
+C:\C#\h02\FirstDrawing\bin\Debug\FirstDrawing.pdb
+C:\C#\h02\FirstDrawing\obj\Debug\MainWindow.g.cs
+C:\C#\h02\FirstDrawing\obj\Debug\App.g.cs
+C:\C#\h02\FirstDrawing\obj\Debug\FirstDrawing_MarkupCompile.cache
+C:\C#\h02\FirstDrawing\obj\Debug\FirstDrawing_MarkupCompile.lref
+C:\C#\h02\FirstDrawing\obj\Debug\MainWindow.baml
+C:\C#\h02\FirstDrawing\obj\Debug\FirstDrawing.g.resources
+C:\C#\h02\FirstDrawing\obj\Debug\FirstDrawing.Properties.Resources.resources
+C:\C#\h02\FirstDrawing\obj\Debug\FirstDrawing.csproj.GenerateResource.Cache
+C:\C#\h02\FirstDrawing\obj\Debug\FirstDrawing.csproj.CoreCompileInputs.cache
+C:\C#\h02\FirstDrawing\obj\Debug\FirstDrawing.exe
+C:\C#\h02\FirstDrawing\obj\Debug\FirstDrawing.pdb
+C:\C#\h02\FirstDrawing\obj\Debug\FirstDrawing.csprojResolveAssemblyReference.cache
