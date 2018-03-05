@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="325" Width="305">
     <Grid>
-        
+        <Button Name="genereerButton" Content="Genereer" HorizontalAlignment="Left" Margin="38,57,0,0" VerticalAlignment="Top" Width="75" Click="genereerButton_Click"/>
+        <TextBox Name="randomTextBox" HorizontalAlignment="Left" Height="23" Margin="164,58,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="sumTextBox" HorizontalAlignment="Left" Height="23" Margin="164,99,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="averageTextBox" HorizontalAlignment="Left" Height="23" Margin="164,152,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Window>

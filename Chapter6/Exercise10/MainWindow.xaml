@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <Label Content="Naam" HorizontalAlignment="Left" Margin="61,72,0,0" VerticalAlignment="Top" Width="82"/>
+        <Label Content="Paswoord" HorizontalAlignment="Left" Margin="61,140,0,0" VerticalAlignment="Top" Width="82"/>
+        <TextBox Name="nameTextBox" HorizontalAlignment="Left" Height="23" Margin="193,76,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="245"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="130,235,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Name="OkButton"  Content="OK" HorizontalAlignment="Left" Margin="363,235,0,0" VerticalAlignment="Top" Width="75"/>
+        <PasswordBox Name="passwordBox" Password="password" PasswordChar="*" HorizontalAlignment="Left" Margin="193,140,0,0" VerticalAlignment="Top" Width="245" Height="26"/>
+        <ProgressBar Name="loginProgressBar" Minimum="0" Maximum="100" HorizontalAlignment="Left" Height="20" Margin="61,29,0,0" VerticalAlignment="Top" Width="377"/>
+
     </Grid>
 </Window>
