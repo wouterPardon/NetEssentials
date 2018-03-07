@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Controls;
 using Guts.Client;
-using Guts.Client.TestTools;
+using Guts.Client.TestTools.WPF;
 using NUnit.Framework;
 
 namespace Exercise11.Tests
@@ -59,13 +57,13 @@ namespace Exercise11.Tests
             AssertAllControlsArePresent();
             AssertRandomGeneratorsArePresent();
 
-            var oldLabelContents = _labels.Select(l => (string) l.Content).Concat(_textBlocks.Select(tb => tb.Text))
+            var oldLabelContents = _labels.Select(l => Convert.ToString(l.Content)).Concat(_textBlocks.Select(tb => tb.Text))
                 .ToList();
 
             _buttons.ElementAt(0).FireClickEvent();
             _buttons.ElementAt(1).FireClickEvent();
 
-            var newLabelContents = _labels.Select(l => (string)l.Content).Concat(_textBlocks.Select(tb => tb.Text))
+            var newLabelContents = _labels.Select(l => Convert.ToString(l.Content)).Concat(_textBlocks.Select(tb => tb.Text))
                 .ToList();
 
             var firstLabelContent = newLabelContents.ElementAt(0);
@@ -112,10 +110,11 @@ namespace Exercise11.Tests
 
         private void AssertAllControlsArePresent()
         {
-            Assert.That(_labels.Count + _textBlocks.Count, Is.EqualTo(2),
-                () => $"The window should have 2 Label controls. Number of Labels that were found: {_labels.Count}");
+            var textDisplayControlCount = _labels.Count + _textBlocks.Count;
+            Assert.That(textDisplayControlCount, Is.EqualTo(2),
+                () => $"The window should have exactly 2 controls to display text (Label or TextBlock). Number of Labels that were found: {_labels.Count}. Number of TextBlocks that were found: {_textBlocks.Count}");
             Assert.That(_buttons.Count, Is.EqualTo(2),
-                () => $"The window should have 2 Button controls. Number of Buttons that were found: {_buttons.Count}");
+                () => $"The window should have exactly 2 Button controls. Number of Buttons that were found: {_buttons.Count}");
         }
 
         private void AssertRandomGeneratorsArePresent()

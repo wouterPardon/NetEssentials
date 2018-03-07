@@ -27,7 +27,7 @@
                    Text="ms gap" VerticalAlignment="Top"/>
         <Slider HorizontalAlignment="Left" Margin="23,243,0,0"
                 VerticalAlignment="Top" Width="100"
-                Name="gapSlider" Minimum="200" Maximum="2000"
+                Name="gapSlider" Minimum="200"  Maximum="2000"
                 ValueChanged="gapSlider_ValueChanged"/>
     </Grid>
 </Window>

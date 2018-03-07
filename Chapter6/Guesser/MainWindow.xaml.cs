@@ -22,7 +22,7 @@ namespace Guesser
     {
         private Random ageGuesser = new Random();
         private int tries = 0;
-        
+       
         public MainWindow()
         {
             InitializeComponent();

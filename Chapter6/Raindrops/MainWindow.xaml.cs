@@ -66,10 +66,10 @@ namespace Raindrops
             paperCanvas.Children.Add(ellipse);
 
             // set new interval for timer
-            timer.Stop();
+           // timer.Stop();
             int ms = randomNumber.Next(1, Convert.ToInt32(gapSlider.Value));
             timer.Interval = TimeSpan.FromMilliseconds(ms);
-            timer.Start();
+            //timer.Start();
         }
 
         private void gapSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
