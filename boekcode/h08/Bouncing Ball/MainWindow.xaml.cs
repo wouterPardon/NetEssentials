@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Bouncing_Ball
 {
@@ -20,28 +21,39 @@ namespace Bouncing_Ball
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer timer;
+        private Ellipse ellipse;
+        double x, y, diameter;
+        int xChange = 10;
+        int yChange = 4;
         public MainWindow()
         {
             InitializeComponent();
+
+            timer = new DispatcherTimer();
+            ellipse = new Ellipse();
+
+            timer.Interval = TimeSpan.FromMilliseconds(200);
+            timer.Tick += timer_tick;
         }
 
         private void ballCanvas_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            double x, y, diameter;
-            int xChange = 10;
-            int yChange = 4;
-
+        {   
             x = 10;
             y = 10;
             diameter = 15;
-            for (int count = 0; count < 200; count++)
-            {
-                MoveBall(ref x, ref y, ref xChange, ref yChange);
-                DrawBall(x, y, diameter);
-            }
+                     
+            DrawBall();
+            timer.Start();
         }
 
-        private void MoveBall(ref double x, ref double y, ref int xChange, ref int yChange)
+        private void timer_tick(object sender, EventArgs e)
+        {
+            MoveBall();
+           
+        }
+
+        private void MoveBall()
         {
             if ((x <= 0) || (x >= ballCanvas.Width))
             {
@@ -54,11 +66,13 @@ namespace Bouncing_Ball
 
             x = x + xChange;
             y = y + yChange;
+
+            ellipse.Margin = new Thickness(x, y, 0, 0);
         }
 
-        private void DrawBall(double x, double y, double diameter)
+        private void DrawBall()
         {
-            Ellipse ellipse = new Ellipse();
+            
             ellipse.Stroke = new SolidColorBrush(Colors.Blue);
             ellipse.Width = diameter;
             ellipse.Height = diameter;
