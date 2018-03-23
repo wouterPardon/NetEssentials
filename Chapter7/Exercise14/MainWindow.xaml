@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Exercise14"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="788.741" Width="563.476">
     <Grid>
-      
+        <Label FontSize="14" Name="nameLabel" Content="Naam:" HorizontalAlignment="Left" Margin="59,45,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
+        <Label FontSize="14" Name="firstNameLabel" Content="Voornaam:" HorizontalAlignment="Left" Margin="59,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.196,-0.819" Height="31" Width="94"/>
+        <TextBox FontSize="14" Name="nameTextBox" HorizontalAlignment="Left" Height="35" Margin="211,51,0,0" TextWrapping="Wrap" Text="Naam" VerticalAlignment="Top" Width="156"/>
+        <TextBox FontSize="14" Name="voorNaamTextBox" HorizontalAlignment="Left" Height="35" Margin="211,105,0,0" TextWrapping="Wrap" Text="Voornaam" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.507,2.169"/>
+        <GroupBox FontSize="16" Header="Geslacht" HorizontalAlignment="Left" Height="112" Margin="102,160,0,0" VerticalAlignment="Top" Width="285">
+            <Grid>
+                <RadioButton Name="maleRadioButton" Content="Man" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <RadioButton Name="feMaleRadioButton" Content="Vrouw" HorizontalAlignment="Left" Margin="183,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.029,0.402"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox FontSize="16" Header="Leeftijd" HorizontalAlignment="Left" Height="280" Margin="102,313,0,0" VerticalAlignment="Top" Width="369">
+            <Grid>
+                <RadioButton Name="firstCatRadioButton" Content="Tusen 18 en 30" HorizontalAlignment="Left" Margin="153,26,0,0" VerticalAlignment="Top" Height="31" Width="194"/>
+                <RadioButton Name="secondCatRadioButton" Content="Tusen 30 en 45" HorizontalAlignment="Left" Margin="153,62,0,0" VerticalAlignment="Top" Height="31" Width="194"/>
+                <RadioButton Name="thirdCatRadioButton"  Content="Tusen 45 en 60" HorizontalAlignment="Left" Margin="153,98,0,0" VerticalAlignment="Top" Height="31" Width="194"/>
+                <RadioButton Name="lastCatRadioButton" Content="Ouder dan 60" HorizontalAlignment="Left" Margin="153,134,0,0" VerticalAlignment="Top" Height="31" Width="194"/>
+            </Grid>
+        </GroupBox>
+        <Button Name="calculateButton" Content="Berekenen" HorizontalAlignment="Left" Margin="343,646,0,0" VerticalAlignment="Top" Width="128" Height="32" Click="calculateButton_Click"/>
     </Grid>
 </Window>

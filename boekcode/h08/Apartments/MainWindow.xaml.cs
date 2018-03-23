@@ -38,7 +38,7 @@ namespace Apartments
         {
             double x, y;
 
-            apartmentsCanvas.Children.Clear();
+           
             SolidColorBrush brush = new SolidColorBrush(Colors.Black);
 
             y = 5;

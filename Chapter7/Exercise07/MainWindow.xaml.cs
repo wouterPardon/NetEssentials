@@ -1,18 +1,87 @@
 ﻿using System.Windows;
 using System.Data;
+using System.Web;
+using System;
+using System.Windows.Controls;
 namespace Exercise07
 {
     public partial class MainWindow : Window
     {
-        string value = "";
-        DataTable dt;
+        //string value = "";
+       //DataTable dt;
+	   private int number;
+	   private int result = 0;
+        private string previousOperator = "+";
+	   private string nextOperator;
+	   private bool newNumberEntered;
         public MainWindow()
         {
             InitializeComponent();
-            dt =  new DataTable();
+            //dt =  new DataTable();
         }
+		
+		private void ButtonDigit_click(object sender, RoutedEventArgs e)
+		{
+			displayTextBox.Text += ((Button)sender).Content;
+		}
+		
+		private void ClearDisplay()
+		{
+			if(newNumberEntered)
+			{
+				displayTextBox.Text = "";
+			}
+			
+			newNumberEntered = false;
+		}
+		
+		private void ButtonOperator_click(object sender, RoutedEventArgs e)
+		{
+            ClearDisplay();
+			number = Convert.ToInt32(displayTextBox.Text);
+			nextOperator = Convert.ToString(((Button)sender).Content);
+			newNumberEntered = true;
+			
+			Count();
+		}
+		
+		private void Count()
+		{
+			switch(previousOperator)
+			{
+				case "+":
+					result += number;
+				break;
+				
+				case "-":
+					result += number;
+				break;
+				
+				default:
+					MessageBox.Show("Foutieve operator");
+				break;
+			}
+			
+			displayTextBox.Text = Convert.ToString(result);
 
-        private void éénButton_Click(object sender, RoutedEventArgs e)
+            if (nextOperator == "=")
+            {
+                InitCalculatorState();
+            }else
+            {
+                previousOperator = nextOperator;
+            }
+			
+		}
+
+        private void InitCalculatorState()
+        {
+            previousOperator = "+";
+            result = 0;
+        }
+		
+
+       /*  private void éénButton_Click(object sender, RoutedEventArgs e)
         {
             Update("1");
         }
@@ -81,13 +150,13 @@ namespace Exercise07
         {
             Update("*");
         }
+ */
 
-
-        private void Update(string number)
+/*         private void Update(string number)
         {
             if (number == "")
             {
-                value = "";
+                value = "0";
 
             }else
             {
@@ -101,12 +170,25 @@ namespace Exercise07
         {
             char[] tekst = value.ToCharArray();
 
-            if (value[tekst.Length - 1] == '+'  || value[tekst.Length - 1] == '-') {
+            if (value[tekst.Length - 1] == '+' || value[tekst.Length - 1] == '-') {
                 value += "0";
+            } else if (value[tekst.Length - 1] == '*')
+            {
+                value += "1";
             }
 
-            displayTextBox.Text = dt.Compute(value, "").ToString();
-            value = "";
+            displayTextBox.Text = BerekenResultaat();
+            ClearValue();
         }
+
+        private string BerekenResultaat()
+        {
+            return dt.Compute(value, "").ToString();
+        }
+
+        private void ClearValue()
+        {
+            value = "";
+        } */
     }
 }
