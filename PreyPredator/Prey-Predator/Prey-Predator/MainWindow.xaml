@@ -1,0 +1,20 @@
+﻿<Window x:Class="Prey_Predator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prey_Predator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Ronde: " FontSize="14" HorizontalAlignment="Left" Margin="32,89,0,0" VerticalAlignment="Top" Height="32" Width="105"/>
+        <Label Name="RoundLabel" Content="0"  FontSize="14" HorizontalAlignment="Left" Margin="258,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.132,-1.115"/>
+        <Label Content="Aantal lieveheersbeestjes: " FontSize="14" HorizontalAlignment="Left" Margin="32,148,0,0" VerticalAlignment="Top" Height="32" Width="182"/>
+        <Label Name="LadybirdsLabel" Content="0"  FontSize="14" HorizontalAlignment="Left" Margin="258,148,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.132,-1.115"/>
+        <Label Content="Aantal luizen: " FontSize="14" HorizontalAlignment="Left" Margin="32,212,0,0" VerticalAlignment="Top" Height="32" Width="182"/>
+        <Label Name="LouseLabel" Content="0"  FontSize="14" HorizontalAlignment="Left" Margin="258,212,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.132,-1.115"/>
+        <Canvas Name="SimulatorCanvas" Background="Gray" HorizontalAlignment="Left" Height="290" Margin="456,92,0,0" VerticalAlignment="Top" Width="326"/>
+        <Button Name="NextRoundButton" Content="Volgende ronde" HorizontalAlignment="Left" Margin="337,106,0,0" VerticalAlignment="Top" Width="114" Height="27"/>
+
+    </Grid>
+</Window>

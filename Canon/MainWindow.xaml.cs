@@ -29,7 +29,7 @@ namespace Canon
             InitializeComponent();
            
             world = new World(canonCanvas, 120, 300);
-            canonBall = new CanonBall(world, new Point(0, canonCanvas.Height - canonCanvas.Height / 15));
+            canonBall = new CanonBall(world, new Point(0, canonCanvas.Height - canonCanvas.Height / 15), heightLabel, DistanceLabel);
             world.DrawScale();
             canonBall.DrawBall();
             speedSlider.ValueChanged += SpeedSlider_ValueChanged;

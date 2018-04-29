@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Shapes;
 using System.Windows.Media;
+using System.Windows;
 
 namespace Canon
 {
@@ -58,6 +59,20 @@ namespace Canon
                 Stroke = new SolidColorBrush(Colors.Black)
             };
             CanvasWorld.Children.Add(lijn);
+        }
+
+        public double ConvertPixelToMeter(double pos)
+        {
+            return this.CanvasWorld.Height / this.Height * pos;
+        }
+
+        public bool IsInWorld(double x, double y)
+        {
+            if (x >= this.CanvasWorld.Width || y < this.CanvasWorld.Height)
+            {
+                return false;
+            }
+            return true;
         }
 
     }

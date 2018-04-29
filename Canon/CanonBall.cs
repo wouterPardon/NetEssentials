@@ -7,23 +7,33 @@ using System.Windows;
 using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows.Threading;
+using System.Windows.Controls;
 
 namespace Canon
 {
-   public class CanonBall
+    public class CanonBall
     {
         public Point StartPos { get; set; }
         public int Speed { set; get; }
         public int Angle { set; get; }
         public World _World { set; get; }
+        public Label HeightLabel { set; get; }
+        public Label WidthLabel { set; get; }
         private Ellipse ball = new Ellipse();
         private DispatcherTimer timerBall;
-        private DateTime startTime = new DateTime();
-
-        public CanonBall(World world, Point startPos)
+        private double startTime = 0;
+        private double x;
+        private double y;
+        private double radians;
+        public CanonBall(World world, Point startPos, Label heightLabel, Label widthLabel)
         {
             this.StartPos = new Point(startPos.X, startPos.Y);
             this._World = world;
+            this.HeightLabel = heightLabel;
+            this.WidthLabel = widthLabel;
+            this.x = startPos.X + 1;
+            this.y = startPos.Y;
+
             CreateTimer();
         }
 
@@ -31,7 +41,7 @@ namespace Canon
         {
             timerBall = new DispatcherTimer
             {
-                Interval = TimeSpan.FromMilliseconds(10)
+                Interval = new TimeSpan(0, 0, 0, 0, 10)
             };
             timerBall.Tick += TimerBall_Tick;
         }
@@ -57,19 +67,31 @@ namespace Canon
 
         private void TimerBall_Tick(object sender, EventArgs e)
         {
-            double radians = this.Angle * Math.PI / 180;
-            TimeSpan difference = DateTime.Now.Subtract(startTime);
-            double _x = ( this.Speed * Math.Cos(radians) * difference.Seconds);
-            double _y = this.Speed * Math.Sin(radians) * difference.Seconds - (1 / 2 * 9.81) * Math.Pow(difference.Seconds, 2);
+            radians = this.Angle * Math.PI / 180;
+            x = BerekenX((double)this.Speed, radians, startTime / 1000) + this.StartPos.X ;
+            y = this.StartPos.Y - BerekenY((double)this.Speed, radians, startTime / 1000);
+            Console.WriteLine(y * (this._World.Height / 120) + " " + x * (this._World.Height / 300));
+            ChangeXY(x, y * (this._World.Height / 120));
 
-            Console.WriteLine(difference.Seconds);
+            if (_World.IsInWorld(x, y))
+            {
+                timerBall.Stop();
+            }
+            startTime += 10;
+        }
 
-            this.ChangeXY(_x, _y);
+        public double BerekenX(double v, double alpha, double t)
+        {
+            return (v * Math.Cos(alpha) * t);
+        }
+
+        public double BerekenY(double v, double alpha, double t)
+        {
+            return (v * Math.Sin(alpha) * t) - (0.5 * 9.81 * (t * t));
         }
 
         public void StartShoot()
         {
-            startTime = DateTime.Now;
             this.timerBall.Start();
         }
     }
