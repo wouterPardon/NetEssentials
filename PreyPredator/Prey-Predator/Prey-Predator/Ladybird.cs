@@ -9,11 +9,7 @@ namespace Prey_Predator
     {
         private int roundsNotEaten = 0;
         private bool starving;
-        public bool Starving
-        {
-            get { return starving; }
-        }
-
+        public bool Starving => starving;
         private readonly MainWindow mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
 
         public Ladybird(double x, double y) : base(x, y)
@@ -25,7 +21,7 @@ namespace Prey_Predator
             List<IPrey> chasedInsects = new List<IPrey>();
             for (int index = 0; index < iPreyList.Count; index++)
             {
-                if (Distance(iPreyList[index]) <= 2)
+                if (Distance(iPreyList[index]) <= 1)
                 {
                     chasedInsects.Add(iPreyList[index]);
                     iPreyList.RemoveAt(index);
@@ -45,10 +41,7 @@ namespace Prey_Predator
                 roundsNotEaten = 0;
             }
 
-            if (roundsNotEaten >= 3)
-            {
-                starving = true;
-            }
+            starving = roundsNotEaten >= 3;                                                                                             
         }
 
         public double Distance(IPrey iPrey)
