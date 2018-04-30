@@ -8,7 +8,12 @@ namespace Prey_Predator
     public class Ladybird: Insect, IPredator
     {
         private int roundsNotEaten = 0;
-        public bool Starving { get; }
+        private bool starving;
+        public bool Starving
+        {
+            get { return starving; }
+        }
+
         private readonly MainWindow mainWin = Application.Current.Windows.Cast<Window>().FirstOrDefault(window => window is MainWindow) as MainWindow;
 
         public Ladybird(double x, double y) : base(x, y)
@@ -24,7 +29,6 @@ namespace Prey_Predator
                 {
                     chasedInsects.Add(iPreyList[index]);
                     iPreyList.RemoveAt(index);
-                    Console.WriteLine(chasedInsects.Count);
                 }
             }
             return chasedInsects;
@@ -39,6 +43,11 @@ namespace Prey_Predator
             else
             {
                 roundsNotEaten = 0;
+            }
+
+            if (roundsNotEaten >= 3)
+            {
+                starving = true;
             }
         }
 

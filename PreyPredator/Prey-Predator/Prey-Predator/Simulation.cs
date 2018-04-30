@@ -49,8 +49,9 @@ namespace Prey_Predator
             rounds++;
             MoveAndAgeInsect();
             ChaseAndEat();
-            SetLabels();
+            BreedInsects();
             UpdateCanvas();
+            SetLabels();
         }
 
         private void UpdateCanvas()
@@ -78,9 +79,10 @@ namespace Prey_Predator
 
         private void MoveAndAgeInsect()
         {
-            int number = random.Next(1, 4);
+           
             for (var index = 0; index < predators.Count; index++)
             {
+                int number = random.Next(1, 8);
                 ((Ladybird) predators[index]).Age = rounds;
                 switch (number)
                 {
@@ -96,11 +98,60 @@ namespace Prey_Predator
                     case 4:
                         ((Ladybird)predators[index]).MoveBackward();
                         break;
+                    case 5:
+                        ((Ladybird)predators[index]).MoveRight();
+                        break;
+                    case 6:
+                        ((Ladybird)predators[index]).MoveForward();
+                        break;
+                    case 7:
+                        ((Ladybird)predators[index]).MoveBackward();
+                        break;
+                    case 8:
+                        ((Ladybird)predators[index]).MoveLeft();
+                        break;
                     default:
                         ((Ladybird)predators[index]).MoveBackward();
                         break;
                 }
-                ((Ladybird)predators[index]).MoveLeft();
+                
+            }
+
+            for (var index = 0; index < preys.Count; index++)
+            {
+                int number = random.Next(1, 8);
+                ((Louse)preys[index]).Age = rounds;
+                switch (number)
+                {
+                    case 1:
+                        ((Louse)preys[index]).MoveRight();
+                        break;
+                    case 2:
+                        ((Louse)preys[index]).MoveBackward();
+                        break;
+                    case 3:
+                        ((Louse)preys[index]).MoveRight();
+                        break;
+                    case 4:
+                        ((Louse)preys[index]).MoveForward();
+                        break;
+                    case 5:
+                        ((Louse)preys[index]).MoveLeft();
+                        break;
+                    case 6:
+                        ((Louse)preys[index]).MoveForward();
+                        break;
+                    case 7:
+                        ((Louse)preys[index]).MoveBackward();
+                        break;
+                    case 8:
+                        ((Louse)preys[index]).MoveRight();
+                        break;
+                    default:
+                        ((Louse)preys[index]).MoveLeft();
+                        break;
+                }
+
             }
         }
 
@@ -112,6 +163,26 @@ namespace Prey_Predator
                 ((Ladybird)predators[index]).Age = rounds;
                 chasedPreys = predators[index].Chase(preys);
                 predators[index].Eat(chasedPreys);
+            }
+        }
+        private void BreedInsects()
+        {
+            int amountOfPredators = predators.Count;
+            int amountOfPreys = preys.Count;
+            for (int index = 0; index < amountOfPredators; index++)
+            {
+                if (rounds % 6 == 0)
+                {
+                    predators.Add(predators[index].Breed());
+                }
+            }
+
+            for (int index = 0; index < amountOfPreys; index++)
+            {
+                if (rounds % 5 == 0)
+                {
+                    preys.Add(preys[index].Breed());
+                }
             }
         }
     }
