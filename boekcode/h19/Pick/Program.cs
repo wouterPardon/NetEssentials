@@ -24,7 +24,7 @@ namespace Pick
                 line = inputStream.ReadLine();
             }
             inputStream.Close();
-            //string wait = Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }

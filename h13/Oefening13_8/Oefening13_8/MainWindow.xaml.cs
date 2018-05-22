@@ -35,17 +35,14 @@ namespace Oefening13_8
             pers3 = new Persoon("f", "P", GeslachtEnum.M, "HA", new DateTime(1999, 02, 15));
             pers4 = new Persoon("z", "P", GeslachtEnum.M, "HA", new DateTime(1999, 02, 15));
 
-            personen.Add(pers1);   
+            personen.Add(pers1);
             personen.Add(pers2);
             personen.Add(pers3);
             personen.Add(pers4);
-
-            PersonLstBox.Items.Add(pers1);
-            PersonLstBox.Items.Add(pers2);
-            PersonLstBox.Items.Add(pers3);
-            PersonLstBox.Items.Add(pers4);
+            ShowPeople();
         }
 
+        
         private void ViewButton_Click(object sender, RoutedEventArgs e)
         {
             Persoon seleccted = (Persoon)PersonLstBox.SelectedItem;
@@ -54,7 +51,21 @@ namespace Oefening13_8
             eigenSchappenWindow.AdresTextBox.Text = seleccted.Adres;
             eigenSchappenWindow.NaamTextBox.Text = seleccted.Naam;
             eigenSchappenWindow.VoornaamTextBox.Text = seleccted.VoorNaam;
-            eigenSchappenWindow.GeboorteDatePicker.DisplayDate = seleccted.GeboorteDatum;
+            eigenSchappenWindow.GeboorteDatePicker.SelectedDate = seleccted.GeboorteDatum;
+        }
+
+        private void ShowPeople()
+        {
+            PersonLstBox.Items.Clear();
+            PersonLstBox.Items.Add(pers1);
+            PersonLstBox.Items.Add(pers2);
+            PersonLstBox.Items.Add(pers3);
+            PersonLstBox.Items.Add(pers4);
+        }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            ShowPeople();
         }
     }
 }

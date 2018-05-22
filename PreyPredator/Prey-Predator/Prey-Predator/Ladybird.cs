@@ -19,12 +19,14 @@ namespace Prey_Predator
         public List<IPrey> Chase(List<IPrey> iPreyList)
         {
             List<IPrey> chasedInsects = new List<IPrey>();
+            int count = 0;
             for (int index = 0; index < iPreyList.Count; index++)
             {
-                if (Distance(iPreyList[index]) <= 1)
+                if (Distance(iPreyList[index]) <= 1 && count <= 20)
                 {
                     chasedInsects.Add(iPreyList[index]);
                     iPreyList.RemoveAt(index);
+                    count++;
                 }
             }
             return chasedInsects;
